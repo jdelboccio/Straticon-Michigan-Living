@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils";
 const buttonVariants = {
   variants: {
     variant: {
-      default: "bg-gray-900 text-white hover:bg-gray-800 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90",
-      outline: "border border-gray-200 bg-white hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50",
-      ghost: "hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50"
+      default: "bg-cherry-red text-white hover:bg-cherry-dark transition-all duration-300 transform hover:scale-105 shadow-xl",
+      outline: "border-2 border-cherry-red text-cherry-red hover:bg-cherry-red hover:text-white transition-all duration-300 transform hover:scale-105 shadow-xl",
+      ghost: "hover:bg-cherry-red/10 hover:text-cherry-red transition-all duration-300"
     },
     size: {
-      default: "h-10 px-4 py-2",
-      sm: "h-9 rounded-md px-3",
-      lg: "h-11 rounded-md px-8"
+      default: "h-12 px-6 py-3 text-base",
+      sm: "h-10 px-4 py-2 text-sm",
+      lg: "h-14 px-8 py-4 text-lg"
     }
   },
   defaultVariants: {
@@ -33,17 +33,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry-red focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
           {
-            "bg-gray-900 text-white hover:bg-gray-800 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90":
+            "bg-cherry-red text-white hover:bg-cherry-dark hover:shadow-2xl transform hover:scale-105":
               variant === "default",
-            "border border-gray-200 bg-white hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50":
+            "border-2 border-cherry-red bg-transparent text-cherry-red hover:bg-cherry-red hover:text-white hover:shadow-2xl transform hover:scale-105":
               variant === "outline",
-            "hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50":
+            "hover:bg-cherry-red/10 hover:text-cherry-red":
               variant === "ghost",
-            "h-10 px-4 py-2": size === "default",
-            "h-9 rounded-md px-3": size === "sm",
-            "h-11 rounded-md px-8": size === "lg",
+            "h-12 px-6 py-3 text-base": size === "default",
+            "h-10 px-4 py-2 text-sm": size === "sm",
+            "h-14 px-8 py-4 text-lg": size === "lg",
           },
           className
         )}
