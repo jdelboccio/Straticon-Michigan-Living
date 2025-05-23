@@ -1,6 +1,11 @@
-# Next.js Admin Dashboard with Preview Mode
+# Straticon Michigan Living
 
-A modern Next.js application with an admin dashboard featuring preview mode functionality. Built with TypeScript, Tailwind CSS, and NextAuth.js for authentication.
+A modern Next.js application with an admin dashboard for property management and booking. Built with TypeScript, Tailwind CSS, and NextAuth.js for authentication.
+
+## Live Website
+
+This site is deployed on GitHub Pages and can be accessed at:
+https://jdelboccio.github.io/Straticon-Michigan-Living/
 
 ## Features
 

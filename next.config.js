@@ -14,7 +14,6 @@ const nextConfig = {
   },
   basePath: '/Straticon-Michigan-Living',
   assetPrefix: '/Straticon-Michigan-Living/',
-  allowedDevOrigins: ['*.csb.app'],
 };
 
 module.exports = nextConfig;
