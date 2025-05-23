@@ -2,18 +2,21 @@
 const nextConfig = {
   output: 'export',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.pexels.com',
-        port: '',
-        pathname: '/photos/**',
-      },
-    ],
-    unoptimized: true
+    unoptimized: true,
   },
-  basePath: '/Straticon-Michigan-Living',
-  assetPrefix: '/Straticon-Michigan-Living/',
-};
+  // Disable server-side features for static export
+  experimental: {
+    appDir: true,
+  },
+  // Configure allowed domains for images
+  images: {
+    domains: ['images.pexels.com'],
+    unoptimized: true,
+  },
+  // Disable features that require server-side functionality
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

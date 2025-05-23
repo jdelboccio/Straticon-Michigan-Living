@@ -1,3 +1,5 @@
+export type MembershipTier = 'Legacy Circle' | 'Heritage Club' | 'Foundation Society';
+
 export interface Booking {
   id: string;
   propertyId: string;
@@ -20,9 +22,7 @@ export interface Property {
   imageUrl: string;
   amenities: string[];
   maxStay: {
-    "Legacy Circle": number;
-    "Heritage Club": number;
-    "Foundation Society": number;
+    [key in MembershipTier]: number;
   };
   address: string;
   available: boolean;
@@ -34,6 +34,6 @@ export interface User {
   email: string;
   name: string;
   role: 'user' | 'admin';
-  membershipTier: 'Legacy Circle' | 'Heritage Club' | 'Foundation Society';
+  membershipTier: MembershipTier;
   yearsOfService: number;
 }

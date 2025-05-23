@@ -95,7 +95,7 @@ export async function generateItineraryPDF(data: ItineraryData): Promise<Buffer>
     .text('Local Area Information', { underline: true })
     .moveDown(0.5)
     .text('Recommended Restaurants:')
-    .text('• Pearl's New Orleans Kitchen - 617 Ames St, Elk Rapids')
+    .text('• Pearl\'s New Orleans Kitchen - 617 Ames St, Elk Rapids')
     .text('• The Torch Lake Café - 4264 US-31, Central Lake')
     .text('• Blue Pelican Inn - 2535 N M-88 Hwy, Central Lake')
     .moveDown(1)

@@ -1,7 +1,6 @@
 import { Property } from "@/types";
-import PropertyView from "./property-view";
 
-const propertyData: Record<string, Property> = {
+export const propertyData: Record<string, Property> = {
   "1": {
     id: "1",
     name: "The Chalet",
@@ -55,15 +54,4 @@ export function generateStaticParams() {
   return Object.keys(propertyData).map((id) => ({
     id,
   }));
-}
-
-export default function PropertyPage({ params }: { params: { id: string } }) {
-  const propertyId = params.id;
-  const property = propertyData[propertyId];
-
-  if (!property) {
-    return <div>Property not found</div>;
-  }
-
-  return <PropertyView property={property} />;
 }
