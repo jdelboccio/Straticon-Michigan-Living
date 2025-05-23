@@ -2,12 +2,14 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jdelboccio.github.io/Straticon-Michigan-Living",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next build && next export",
+    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -60,6 +62,7 @@
     "recharts": "^2.15.3",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
     "zod": "^3.24.4"
   },
