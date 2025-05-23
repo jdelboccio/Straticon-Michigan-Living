@@ -4,7 +4,7 @@ import { MapPin, Users, Calendar } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section with Cherry Background */}
       <section
         className="parallax-section full-width-section"
@@ -13,19 +13,20 @@ export default function HomePage() {
             "url('https://images.pexels.com/photos/35629/bing-cherries-ripe-red-fruit.jpg')",
           backgroundPosition: "center center",
           backgroundSize: "cover",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="h-screen flex items-center justify-center">
           <div className="text-center text-white px-4 max-w-7xl mx-auto">
-            <h1 className="hero-text mb-6">Michigan Living</h1>
-            <h2 className="subtitle-text mb-12">
+            <h1 className="hero-text mb-6 drop-shadow-2xl">Michigan Living</h1>
+            <h2 className="subtitle-text mb-12 drop-shadow-lg">
               A Straticon Family Experience
             </h2>
             <Link href="/login">
               <Button
                 variant="default"
                 size="lg"
-                className="bg-white/90 text-gray-900 text-lg px-12 py-6 hover:bg-white hover:scale-105 transition-transform duration-300"
+                className="bg-white/90 text-gray-900 text-lg px-12 py-6 hover:bg-white hover:scale-105 transition-transform duration-300 shadow-xl"
               >
                 Begin Your Journey
               </Button>
@@ -91,15 +92,16 @@ export default function HomePage() {
           backgroundImage:
             "url('https://cdn.traversecity.com/images/2022/07/TC-Beach-1-1920x1080.jpg')",
           backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="h-screen flex items-center justify-center">
           <div className="text-center text-white max-w-5xl px-4">
-            <h2 className="text-8xl font-bold mb-8 font-playfair">Traverse City</h2>
-            <p className="text-3xl mb-6 opacity-90">
+            <h2 className="text-8xl font-bold mb-8 font-playfair drop-shadow-2xl">Traverse City</h2>
+            <p className="text-3xl mb-6 opacity-90 drop-shadow-lg">
               Where crystal waters meet endless horizons
             </p>
-            <p className="text-xl max-w-3xl mx-auto opacity-80">
+            <p className="text-xl max-w-3xl mx-auto opacity-80 drop-shadow">
               Experience the jewel of Northern Michigan, where pristine beaches,
               rolling vineyards, and charming downtown streets create unforgettable
               moments
@@ -195,7 +197,7 @@ export default function HomePage() {
             <Button
               variant="default"
               size="lg"
-              className="bg-cherry-red text-white text-xl px-16 py-8 hover:bg-[#7A1C29] transform hover:scale-105 transition-all duration-300"
+              className="bg-cherry-red text-white text-xl px-16 py-8 hover:bg-[#7A1C29] transform hover:scale-105 transition-all duration-300 shadow-xl"
             >
               Sign In to Book
             </Button>
