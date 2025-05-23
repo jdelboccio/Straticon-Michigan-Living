@@ -15,23 +15,32 @@ export default function HomePage() {
           backgroundSize: "cover",
         }}
       >
-        <div className="h-screen flex items-center justify-center bg-gradient-to-b from-black/50 to-black/30">
-          <div className="text-center text-white px-4">
-            <h1 className="hero-text mb-4">Michigan Living</h1>
-            <h2 className="text-2xl md:text-4xl font-light mb-8">
+        <div className="h-screen flex items-center justify-center">
+          <div className="text-center text-white px-4 max-w-7xl mx-auto">
+            <h1 className="hero-text mb-6">Michigan Living</h1>
+            <h2 className="subtitle-text mb-12">
               A Straticon Family Experience
             </h2>
+            <Link href="/login">
+              <Button
+                variant="default"
+                size="lg"
+                className="bg-white/90 text-gray-900 text-lg px-12 py-6 hover:bg-white hover:scale-105 transition-transform duration-300"
+              >
+                Begin Your Journey
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Welcome Letter */}
-      <section className="py-24 px-4 bg-gradient-to-b from-white to-blue-50">
+      <section className="py-32 px-4 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-4xl mx-auto letter-paper">
-          <h3 className="text-3xl font-bold mb-8 text-center">
+          <h3 className="text-4xl font-bold mb-12 text-center font-playfair">
             Dear Valued Straticon Family Member,
           </h3>
-          <div className="space-y-6 text-lg leading-relaxed">
+          <div className="space-y-8 text-lg leading-relaxed">
             <p>
               You know, as I sit here writing this letter, my heart is filled
               with immense gratitude. Not just because you're reading this, but
@@ -67,16 +76,9 @@ export default function HomePage() {
               transforms the landscape into a canvas of warm colors, and winter
               blankets everything in serene white.
             </p>
-            <p>
-              This invitation is our way of saying "thank you" - for your
-              dedication, your passion, and most importantly, for being part of
-              our extended family. We want you to experience the joy, peace, and
-              beauty that we've found in this special corner of the world,
-              because you've earned it, my friend, you truly have.
-            </p>
-            <div className="text-right mt-12">
+            <div className="text-right mt-16">
               <p className="font-semibold">With heartfelt appreciation,</p>
-              <p className="text-xl mt-2 font-playfair">The Hardin Family</p>
+              <p className="text-2xl mt-2 font-playfair">The Hardin Family</p>
             </div>
           </div>
         </div>
@@ -91,13 +93,13 @@ export default function HomePage() {
           backgroundPosition: "center center",
         }}
       >
-        <div className="h-screen flex items-center justify-center bg-gradient-to-b from-blue-900/60 via-blue-900/40 to-transparent">
-          <div className="text-center text-white max-w-4xl px-4">
-            <h2 className="text-6xl font-bold mb-6 font-playfair">Traverse City</h2>
-            <p className="text-2xl mb-4 opacity-90">
+        <div className="h-screen flex items-center justify-center">
+          <div className="text-center text-white max-w-5xl px-4">
+            <h2 className="text-8xl font-bold mb-8 font-playfair">Traverse City</h2>
+            <p className="text-3xl mb-6 opacity-90">
               Where crystal waters meet endless horizons
             </p>
-            <p className="text-lg max-w-2xl mx-auto opacity-80">
+            <p className="text-xl max-w-3xl mx-auto opacity-80">
               Experience the jewel of Northern Michigan, where pristine beaches,
               rolling vineyards, and charming downtown streets create unforgettable
               moments
@@ -107,10 +109,10 @@ export default function HomePage() {
       </section>
 
       {/* Recognition Tiers */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="hero-text text-center mb-16">Recognition</h2>
-          <div className="grid md:grid-cols-3 gap-12">
+      <section className="py-32 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="hero-text text-center mb-24 text-gray-900">Recognition</h2>
+          <div className="grid md:grid-cols-3 gap-16">
             {[
               {
                 title: "Legacy Circle",
@@ -136,13 +138,13 @@ export default function HomePage() {
                 perks: ["Standard Booking Access", "Weekend Stays", "Welcome Package"],
               },
             ].map((tier) => (
-              <div key={tier.title} className="modern-card p-8">
-                <h3 className="text-2xl font-bold mb-4">{tier.title}</h3>
-                <p className="text-xl mb-6">{tier.years}</p>
-                <ul className="space-y-3">
+              <div key={tier.title} className="modern-card p-12">
+                <h3 className="text-3xl font-bold mb-6 font-playfair">{tier.title}</h3>
+                <p className="text-2xl mb-8 text-gray-600">{tier.years}</p>
+                <ul className="space-y-4">
                   {tier.perks.map((perk) => (
-                    <li key={perk} className="flex items-center">
-                      <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+                    <li key={perk} className="flex items-center text-lg">
+                      <span className="w-2 h-2 bg-cherry-red rounded-full mr-3"></span>
                       {perk}
                     </li>
                   ))}
@@ -154,27 +156,27 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-24 px-4 bg-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-16">
+      <section className="py-32 px-4 bg-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-20">
             <div className="text-center fade-in">
-              <MapPin className="w-16 h-16 mx-auto mb-6 text-blue-600" />
-              <h3 className="text-2xl font-bold mb-4">Prime Locations</h3>
-              <p className="text-gray-600 text-lg">
+              <MapPin className="w-20 h-20 mx-auto mb-8 text-cherry-red" />
+              <h3 className="text-3xl font-bold mb-6 font-playfair">Prime Locations</h3>
+              <p className="text-xl text-gray-600">
                 Stunning waterfront properties in Northern Michigan's finest areas
               </p>
             </div>
             <div className="text-center fade-in">
-              <Users className="w-16 h-16 mx-auto mb-6 text-blue-600" />
-              <h3 className="text-2xl font-bold mb-4">Family Focused</h3>
-              <p className="text-gray-600 text-lg">
+              <Users className="w-20 h-20 mx-auto mb-8 text-cherry-red" />
+              <h3 className="text-3xl font-bold mb-6 font-playfair">Family Focused</h3>
+              <p className="text-xl text-gray-600">
                 Create lasting memories in our spacious retreats
               </p>
             </div>
             <div className="text-center fade-in">
-              <Calendar className="w-16 h-16 mx-auto mb-6 text-blue-600" />
-              <h3 className="text-2xl font-bold mb-4">Flexible Stays</h3>
-              <p className="text-gray-600 text-lg">
+              <Calendar className="w-20 h-20 mx-auto mb-8 text-cherry-red" />
+              <h3 className="text-3xl font-bold mb-6 font-playfair">Flexible Stays</h3>
+              <p className="text-xl text-gray-600">
                 Book your perfect getaway any time of year
               </p>
             </div>
@@ -183,17 +185,17 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-32 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="hero-text mb-8">Your Retreat Awaits</h2>
-          <p className="text-xl mb-12">
+          <h2 className="hero-text mb-12 text-gray-900">Your Retreat Awaits</h2>
+          <p className="text-2xl mb-16 text-gray-600">
             Sign in with your Straticon email to explore our properties
           </p>
           <Link href="/login">
             <Button
               variant="default"
               size="lg"
-              className="bg-blue-900 text-white text-lg px-12 py-6 hover:bg-blue-800"
+              className="bg-cherry-red text-white text-xl px-16 py-8 hover:bg-[#7A1C29] transform hover:scale-105 transition-all duration-300"
             >
               Sign In to Book
             </Button>
