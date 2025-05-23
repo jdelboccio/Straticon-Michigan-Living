@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
     remotePatterns: [
       {
@@ -9,7 +10,10 @@ const nextConfig = {
         pathname: '/photos/**',
       },
     ],
+    unoptimized: true
   },
+  basePath: '/Straticon-Michigan-Living',
+  assetPrefix: '/Straticon-Michigan-Living/',
   allowedDevOrigins: ['*.csb.app'],
 };
 
