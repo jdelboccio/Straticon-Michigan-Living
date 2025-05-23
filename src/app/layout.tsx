@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import { Providers } from "./providers";
 import ScrollAnimations from "@/components/scroll-animations";
-import FontLoader from "@/components/font-loader";
 import "./globals.css";
 
 const playfair = Playfair_Display({ 
@@ -20,6 +19,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Michigan Living - Straticon Employee Retreat",
   description: "Experience Michigan with the Hardin family - A special retreat for our valued Straticon employees",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -28,10 +30,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="smooth-scroll">
-      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans antialiased bg-white">
         <Providers>
-          <FontLoader />
           <ScrollAnimations />
           <main className="relative">
             {children}
